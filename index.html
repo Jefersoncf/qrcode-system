@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generate</title>
+    <!-- link of lib file js -->
+    <script src="app.js" defer></script>
+    <!-- link of lib generate qr code -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- link favicon-->
+    <link rel="shortcut icon" href="/img/qrcode-scan.svg" type="image/x-icon" />
+    <!-- link of font google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link of style css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Gerador de QR Code</div>
+    </header>
+    <!-- main -->
+    <main>
+      <div class="container">
+        <div class="content01">
+          <h1>Gerador de QR Code</h1>
+          <p>
+            O QR Code é um código de barras bidimensional que pode ser
+            facilmente escaneado usando a maioria dos telefones celulares
+            equipados com câmera.
+          </p>
+          <p>
+            Insira a url que deseja gerar o QR Code e clique em gerar. Depois é
+            só salvar a imagem.
+          </p>
+          <form id="generate" class="generate">
+            <input
+              type="url"
+              id="url"
+              name="url"
+              placeholder="Insira uma URL"
+            />
+
+            <select name="" id="size">
+              <option value="100">100x100</option>
+              <option value="200">200x200</option>
+              <option value="300" selected>300x300</option>
+              <option value="400">400x400</option>
+              <option value="500">500x500</option>
+              <option value="500">600x600</option>
+              <option value="500">700x700</option>
+            </select>
+            <button type="submit">Gerar QR Code</button>
+          </form>
+        </div>
+        <div class="content02">
+          <img
+            src="/img/qrcode.png"
+            width="500px"
+            title="Celular fazendo leitura de um QR Code"
+            alt="Imagem de celular lendo o codigo QR Code"
+          />
+        </div>
+      </div>
+
+      <!-- qr code -->
+      <div class="qrcode-container" id="qrcode-container">
+        <div id="spinner" role="status">
+          <div class="spin"></div>
+
+          <span class="loading">Loading...</span>
+        </div>
+        <div class="qrcode" id="qrcode"></div>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer>
+      <p>
+        Desenvolvido por
+        <a
+          href="https://github.com/Jefersoncf"
+          target="_blank"
+          title="GitHub Jeferson Ferreira"
+          >Jeferson Ferreira</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
