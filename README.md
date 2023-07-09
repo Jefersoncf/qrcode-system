@@ -29,7 +29,7 @@ Tecnologias utilizadas:
   * Github Pages
 
 ## Links
- - Aplicação rodando:https://jefersoncf.github.io/analogic-clock-with-css-html-javascript/
+ - Aplicação rodando: https://jefersoncf.github.io/qrcode-system
  
  ## Autor
  * **Jeferson Ferreira**: Jefersoncf https://github.com/Jefersoncf
